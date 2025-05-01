@@ -1,0 +1,143 @@
+/* Reset + Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6fa;
+  color: #1D2955;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #1D2955;
+  color: #fff;
+  padding: 20px;
+}
+.sidebar h2 {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar li {
+  margin: 15px 0;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.sidebar li:hover,
+.sidebar .active {
+  background-color: #2f3f77;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.dashboard-header h1 {
+  font-size: 1.8em;
+}
+.dashboard-header p {
+  color: #555;
+}
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Widgets */
+.widgets {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.widget {
+  background-color: #ffffff;
+  border-left: 5px solid #1D2955;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 1em;
+}
+
+/* Details Section */
+.details {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.notices,
+.classes {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.notices h2,
+.classes h2 {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+.notices ul,
+.classes ul {
+  list-style: none;
+}
+.notices li,
+.classes li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .sidebar h2 {
+    display: none;
+  }
+  .sidebar ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+  }
+  .main-content {
+    padding: 20px;
+  }
+  .widgets,
+  .details {
+    flex-direction: column;
+  }
+}
